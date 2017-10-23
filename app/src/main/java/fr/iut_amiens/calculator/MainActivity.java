@@ -20,14 +20,17 @@ public class MainActivity extends Activity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        bindViews();
+    }
 
+    private void bindViews() {
         findViewById(R.id.buttonPlus).setOnClickListener(this);
         findViewById(R.id.buttonMinus).setOnClickListener(this);
         findViewById(R.id.buttonTime).setOnClickListener(this);
         findViewById(R.id.buttonDivide).setOnClickListener(this);
 
-        editTextA = (EditText) findViewById(R.id.editTextA);
-        editTextB = (EditText) findViewById(R.id.editTextB);
+        editTextA = findViewById(R.id.editTextA);
+        editTextB = findViewById(R.id.editTextB);
     }
 
     public BigDecimal getNumberA() {
