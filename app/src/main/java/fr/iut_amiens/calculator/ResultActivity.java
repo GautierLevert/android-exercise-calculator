@@ -25,8 +25,8 @@ public class ResultActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
-        resultField = (TextView) findViewById(R.id.resultTextView);
-        operationField = (TextView) findViewById(R.id.operationTextView);
+        resultField = findViewById(R.id.resultTextView);
+        operationField = findViewById(R.id.operationTextView);
 
         displayOperation();
         displayResult();
